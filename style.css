@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'Creepster';
+    src: url(./fonts/Creepster/Creepster-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Metal Mania';
+    src: url(./fonts/MetalMania/MetalMania-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+    "titulo titulo titulo titulo"
+    "link-instrucoes link-instrucoes link-historia link-historia"
+    "titulo-instrucoes titulo-instrucoes titulo-instrucoes titulo-instrucoes"
+    "p-instrucoes p-instrucoes p-instrucoes p-instrucoes"
+    "titulo-historia titulo-historia titulo-historia titulo-historia"
+    "p-historia p-historia p-historia p-historia"
+    "controle controle controle controle"
+    "botao botao botao botao"
+    "jogo jogo jogo jogo"
+    "link-faculdade link-linkedin link-github link-instagram";
+    font-family: 'Metal Mania';
+    color: white;
+    background-color: #000000;
+}
+
+.titulo{
+    grid-area: titulo;
+    text-align: center;
+    font-family: 'Creepster';
+    font-size: 8rem;
+    color: #FF9A00;
+    margin: 20px 0;
+}
+
+.link-instrucoes{
+    grid-area: link-instrucoes;    
+}
+
+.link-historia{
+    grid-area: link-historia;
+}
+
+.links-menu{
+    text-align: center;
+    text-decoration: none;    
+    color: #85E21F;
+    font-size: 4rem;
+    margin: 0 0 20px 0;
+}
+
+.links-menu:hover{
+    text-decoration: underline;
+}
+
+.titulo-instrucoes{
+    grid-area: titulo-instrucoes;
+}
+
+.p-instrucoes{
+    grid-area: p-instrucoes;
+}
+
+.titulo-historia{
+    grid-area: titulo-historia;
+}
+
+.p-historia{
+    grid-area: p-historia;
+}
+
+.sub-titulo{
+    font-size: 2.5rem;
+    color: #85E21F;
+    margin: 0 20px 20px 20px;
+}
+
+.p-conteudo{
+    font-size: 2rem;
+    margin: 0 20px 20px 20px;
+}
+
+.controle{
+    grid-area: controle;
+    text-align: center;
+}
+
+.cronometro{
+    grid-area: controle;
+    text-align: center;
+    color: #85E21F;
+    margin-bottom: 10px;
+    font-size: 3.5rem;
+}
+
+#minutos{
+    grid-area: minutos;
+}
+
+.separador{
+    grid-area: separador;
+}
+
+#segundos{
+    grid-area: segundos;
+}
+
+#milissegundos{
+    grid-area: milissegundos;
+}
+
+.tempo{
+    min-width: 85px;
+}
+
+#botao{
+    grid-area: botao;
+    text-align: center;
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Creepster';
+    background-color: #FF9A00;
+    color: #881EE4;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#botao:hover{
+    transform: scale(1.02);
+}
+
+.botao-oculto{
+    display: none;
+}
+
+div img{
+    height: 174.5px;
+    width: 133px;
+    border-radius: 20px;
+}
+
+.cardInicial{
+    height: 174.5px;
+    width: 133px;
+}
+
+.cardFinal{
+    height: 174.5px;
+    width: 133px;
+}
+
+.jogo-oculto{
+    display: none;
+}
+
+.jogo{
+    grid-area: jogo;
+    text-align: center;
+    justify-content: center;
+    height: 543.5px;
+    width: 705px;
+    background-color: #881EE4;
+    display: grid;
+    grid-template: 
+    "personagem1 personagem2 personagem3 personagem4 personagem5"
+    "personagem6 personagem7 personagem8 personagem9 personagem10"
+    "personagem11 personagem12 personagem13 personagem14 personagem15";
+    gap: 10px;
+    padding: 10px 10px;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+}
+
+.personagem1{
+    grid-area: personagem1;
+}
+
+.personagem1{
+    grid-area: personagem2;
+}
+
+.personagem1{
+    grid-area: personagem3;
+}
+
+.personagem1{
+    grid-area: personagem4;
+}
+
+.personagem1{
+    grid-area: personagem5;
+}
+
+.personagem1{
+    grid-area: personagem6;
+}
+
+.personagem1{
+    grid-area: personagem7;
+}
+
+.personagem1{
+    grid-area: personagem8;
+}
+
+.personagem1{
+    grid-area: personagem9;
+}
+
+.personagem1{
+    grid-area: personagem10;
+}
+
+.personagem1{
+    grid-area: personagem11;
+}
+
+.personagem1{
+    grid-area: personagem12;
+}
+
+.personagem1{
+    grid-area: personagem13;
+}
+
+.personagem1{
+    grid-area: personagem14;
+}
+
+.personagem1{
+    grid-area: personagem15;
+}
+
+.link-faculdade{
+    grid-area: link-faculdade;
+}
+
+.link-linkedin{
+    grid-area: link-linkedin;
+}
+
+.link-github{
+    grid-area: link-github;
+}
+
+.link-instagram{
+    grid-area: link-instagram;
+}
+
+.links-footer{
+    background-color: #FF9A00;
+    color: #881EE4;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 30px 0;
+}
+
+.links-footer:hover{
+    text-decoration: underline;
+}

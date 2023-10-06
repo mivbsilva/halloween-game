@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Halloween Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="titulo">Halloween Game</h1>
+    <a href="#titulo-instrucoes" class="link-instrucoes links-menu">Instruções</a>
+    <a href="#titulo-historia" class="link-historia links-menu">História do jogo</a>
+    <h2 class="titulo-instrucoes sub-titulo">Instruções</h2>
+    <p class="p-instrucoes p-conteudo">
+        Bem-vindo ao Halloween Game! Serão apresentadas 15 imagens de personagens horripilantes de filmes de terror. Assim que o tempo do cronômetro acabar, as imagens irão desaparecer e reaparecerão embaralhadas. Porém, 4 dos personagens já não serão mais os memos. O objetivo do jogo é clicar nos personagens que permanecem os mesmos, restando somente os 4 personagens que foram modificados. Caso você clique em um personagem novo, você perde. A medida que você clica nos personagens, eles serão eliminados, ficando cada vez mais fácil chegar vivo ao final! Boa sorte!
+    </p>
+    <h2 class="titulo-historia sub-titulo">História do jogo</h2>
+    <p class="p-historia p-conteudo">
+        O jogo foi criado através de um trabalho das Faculdades Integradas Vianna Júnior de Juiz de Fora/MG. As disciplinas abordadas são Design de Interfaces Digitais e Tecnologia Web Aplicada do curso de Análise e Desenvolvimento de sistemas. O foco é praticar o conteúdo aprendido em aula sobre os assuntos HTML, CSS e JavaScript. O tema escolhido foi o Halloween e filmes de terror clássicos do cinema.
+    </p>
+    <div class="controle">
+        <div class="cronometro">
+            <span class="tempo" id="minutos">00</span>
+            <span class="separador">:</span>
+            <span class="tempo" id="segundos">00</span>
+            <span class="separador">:</span>
+            <span class="tempo" id="milissegundos">00</span>
+        </div>
+        <button id="botao">Iniciar</button>
+    </div>
+    <div class="jogo-oculto">
+        <div class="personagem1 cardInicial"></div>
+        <div class="personagem2 cardInicial"></div>
+        <div class="personagem3 cardInicial"></div>
+        <div class="personagem4 cardInicial"></div>
+        <div class="personagem5 cardInicial"></div>
+        <div class="personagem6 cardInicial"></div>
+        <div class="personagem7 cardInicial"></div>
+        <div class="personagem8 cardInicial"></div>
+        <div class="personagem9 cardInicial"></div>
+        <div class="personagem10 cardInicial"></div>
+        <div class="personagem11 cardInicial"></div>
+        <div class="personagem12 cardInicial"></div>
+        <div class="personagem13 cardInicial"></div>
+        <div class="personagem14 cardInicial"></div>
+        <div class="personagem15 cardInicial"></div>
+    </div>
+    <a href="https://www.vianna.edu.br/" target="_blank" class="link-faculdade links-footer">Faculdades Integradas Vianna Júnior</a>
+    <a href="https://www.linkedin.com/in/milena-ventura/" target="_blank" class="link-linkedin links-footer">LinkedIn</a>
+    <a href="https://github.com/mivbsilva" target="_blank" class="link-github links-footer">GitHub</a>
+    <a href="https://www.instagram.com/mventurabs/" target="_blank" class="link-instagram links-footer">Instagram</a>
+    <script src="./script.js"></script>
+</body>
+</html>
