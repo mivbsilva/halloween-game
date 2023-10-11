@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Creepster';
+    src: url(./fonts/Creepster/Creepster-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Metal Mania';
+    src: url(./fonts/MetalMania/MetalMania-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    display: grid;
+    grid-template:
+    "titulo titulo titulo" 15%
+    "link-instrucoes link-historia link-jogo" 10%
+    "sub-titulo sub-titulo sub-titulo" 15%
+    "p-conteudo p-conteudo p-conteudo" auto
+    "link-faculdade link-linkedin link-github" 5%
+    / 33% auto 33%; 
+    font-family: 'Metal Mania';
+    color: white;
+    background-image: linear-gradient(to right bottom, #000000, #000000, #000000, #000000, #000000, #060002, #0c0004, #100007, #16000f, #180018, #160020, #0d002a);
+    height: 100vh;
+}
+
+.titulo{
+    grid-area: titulo;
+    text-align: center;
+    font-family: 'Creepster';
+    font-size: 4rem;
+    color: #FF9A00;
+    margin: 5px 0;
+    align-self: center;
+}
+
+.link-instrucoes{
+    grid-area: link-instrucoes;    
+}
+
+.link-historia{
+    grid-area: link-historia;
+}
+
+.link-jogo{
+    grid-area: link-jogo;
+}
+
+.links-menu{
+    text-align: center;
+    align-self: center;
+    text-decoration: none;    
+    color: #85E21F;
+    font-size: 2rem;
+    margin: 0 0 5px 0;
+}
+
+.links-menu:hover{
+    text-decoration: underline;
+}
+
+.sub-titulo{
+    grid-area: sub-titulo;    
+    align-self: center;
+    font-size: 2.5rem;
+    color: #85E21F;
+    margin: 0 20px 5px 20px;
+}
+
+.p-conteudo{
+    grid-area: p-conteudo;    
+    align-self: center;
+    font-size: 2rem;
+    margin: 0 20px 5px 20px;
+}
+
+.link-faculdade{
+    grid-area: link-faculdade;
+}
+
+.link-linkedin{
+    grid-area: link-linkedin;
+}
+
+.link-github{
+    grid-area: link-github;
+}
+
+.link-instagram{
+    grid-area: link-instagram;
+}
+
+.links-footer{
+    background-color: #FF9A00;
+    color: #881EE4;
+    text-align: center;
+    align-self: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    height: 100%;
+}
+
+.links-footer:hover{
+    text-decoration: underline;
+}

@@ -16,29 +16,27 @@
 
 body{
     display: grid;
-    grid-template-areas:
-    "titulo titulo titulo titulo"
-    "link-instrucoes link-instrucoes link-historia link-historia"
-    "titulo-instrucoes titulo-instrucoes titulo-instrucoes titulo-instrucoes"
-    "p-instrucoes p-instrucoes p-instrucoes p-instrucoes"
-    "titulo-historia titulo-historia titulo-historia titulo-historia"
-    "p-historia p-historia p-historia p-historia"
-    "controle controle controle controle"
-    "botao botao botao botao"
-    "jogo jogo jogo jogo"
-    "link-faculdade link-linkedin link-github link-instagram";
+    grid-template:
+    "titulo titulo titulo" 15%
+    "link-instrucoes link-historia link-jogo" 10%
+    "controle controle controle" 15%
+    "jogo jogo jogo" auto
+    "link-faculdade link-linkedin link-github" 5%
+    / 33% auto 33%;
     font-family: 'Metal Mania';
     color: white;
-    background-color: #000000;
+    background-image: linear-gradient(to right bottom, #000000, #000000, #000000, #000000, #000000, #060002, #0c0004, #100007, #16000f, #180018, #160020, #0d002a);
+    height: 100vh;
 }
 
 .titulo{
     grid-area: titulo;
     text-align: center;
+    align-self: center;
     font-family: 'Creepster';
-    font-size: 8rem;
+    font-size: 4rem;
     color: #FF9A00;
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 .link-instrucoes{
@@ -49,56 +47,35 @@ body{
     grid-area: link-historia;
 }
 
+.link-jogo{
+    grid-area: link-jogo;
+}
+
 .links-menu{
     text-align: center;
+    align-self: center;
     text-decoration: none;    
     color: #85E21F;
-    font-size: 4rem;
-    margin: 0 0 20px 0;
+    font-size: 2rem;
+    margin: 0 0 5px 0;
 }
 
 .links-menu:hover{
     text-decoration: underline;
 }
 
-.titulo-instrucoes{
-    grid-area: titulo-instrucoes;
-}
-
-.p-instrucoes{
-    grid-area: p-instrucoes;
-}
-
-.titulo-historia{
-    grid-area: titulo-historia;
-}
-
-.p-historia{
-    grid-area: p-historia;
-}
-
-.sub-titulo{
-    font-size: 2.5rem;
-    color: #85E21F;
-    margin: 0 20px 20px 20px;
-}
-
-.p-conteudo{
-    font-size: 2rem;
-    margin: 0 20px 20px 20px;
-}
-
 .controle{
     grid-area: controle;
     text-align: center;
+    align-self: center;
 }
 
 .cronometro{
     grid-area: controle;
     text-align: center;
     color: #85E21F;
-    margin-bottom: 10px;
-    font-size: 3.5rem;
+    margin-bottom: 5px;
+    font-size: 2rem;
 }
 
 #minutos{
@@ -121,22 +98,21 @@ body{
     min-width: 85px;
 }
 
-#botao{
-    grid-area: botao;
+.botao{
     text-align: center;
-    width: 200px;
-    padding: 10px 20px;
-    font-size: 2rem;
+    width: 150px;
+    padding: 5px 0;
+    font-size: 1.5rem;
     border-radius: 20px;
     cursor: pointer;
     font-family: 'Creepster';
     background-color: #FF9A00;
     color: #881EE4;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-#botao:hover{
+.botao:hover{
     transform: scale(1.02);
 }
 
@@ -144,20 +120,21 @@ body{
     display: none;
 }
 
+.link-botao-restart{
+    text-decoration: none;
+    color: #881EE4;
+    font-size: 1.5rem;
+}
+
 div img{
-    height: 174.5px;
-    width: 133px;
+    height: 92.5px;
+    width: 70.5px;
     border-radius: 20px;
 }
 
-.cardInicial{
-    height: 174.5px;
-    width: 133px;
-}
-
-.cardFinal{
-    height: 174.5px;
-    width: 133px;
+.cardInicial, .cardFinal{
+    height: 92.5px;
+    width: 70.5px;
 }
 
 .jogo-oculto{
@@ -167,79 +144,107 @@ div img{
 .jogo{
     grid-area: jogo;
     text-align: center;
-    justify-content: center;
-    height: 543.5px;
-    width: 705px;
+    align-self: center;
+    height: 297.5px;
+    width: 392.5px;
     background-color: #881EE4;
     display: grid;
     grid-template: 
-    "personagem1 personagem2 personagem3 personagem4 personagem5"
-    "personagem6 personagem7 personagem8 personagem9 personagem10"
-    "personagem11 personagem12 personagem13 personagem14 personagem15";
+    "personagem1 personagem2 personagem3 personagem4 personagem5" 92.5px
+    "personagem6 personagem7 personagem8 personagem9 personagem10" 92.5px
+    "personagem11 personagem12 personagem13 personagem14 personagem15" 92.5px
+    / 70.5px 70.5px 70.5px 70.5px 70.5px;
     gap: 10px;
     padding: 10px 10px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 5px auto;
     border-radius: 20px;
+}
+
+.jogo-block{
+    grid-area: jogo;
+    height: 297.5px;
+    width: 392.5px;
+    background-color: #881EE4;
+    padding: 10px 10px;
+    margin: 0 auto 5px auto;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.jogo-block p{
+    align-self: center;
+}
+
+.estilo-resultado{
+    font-family: 'Creepster';
+    font-size: 2.5rem;
+    color: #FF9A00;
+    margin: 0 0 20px 0;
+    text-align: center; 
 }
 
 .personagem1{
     grid-area: personagem1;
 }
 
-.personagem1{
+.personagem2{
     grid-area: personagem2;
 }
 
-.personagem1{
+.personagem3{
     grid-area: personagem3;
 }
 
-.personagem1{
+.personagem4{
     grid-area: personagem4;
 }
 
-.personagem1{
+.personagem5{
     grid-area: personagem5;
 }
 
-.personagem1{
+.personagem6{
     grid-area: personagem6;
 }
 
-.personagem1{
+.personagem7{
     grid-area: personagem7;
 }
 
-.personagem1{
+.personagem8{
     grid-area: personagem8;
 }
 
-.personagem1{
+.personagem9{
     grid-area: personagem9;
 }
 
-.personagem1{
+.personagem10{
     grid-area: personagem10;
 }
 
-.personagem1{
+.personagem11{
     grid-area: personagem11;
 }
 
-.personagem1{
+.personagem12{
     grid-area: personagem12;
 }
 
-.personagem1{
+.personagem13{
     grid-area: personagem13;
 }
 
-.personagem1{
+.personagem14{
     grid-area: personagem14;
 }
 
-.personagem1{
+.personagem15{
     grid-area: personagem15;
+}
+
+.card-oculto{
+    display: none;
 }
 
 .link-faculdade{
@@ -262,9 +267,10 @@ div img{
     background-color: #FF9A00;
     color: #881EE4;
     text-align: center;
+    align-self: center;
     text-decoration: none;
     font-size: 1.2rem;
-    padding: 30px 0;
+    height: 100%;
 }
 
 .links-footer:hover{
